@@ -1,0 +1,1117 @@
+@import "../../abstracts/mixins";
+.home {
+    //landing start
+
+    .landing {
+        background: url("../../../../landing2.png") no-repeat;
+        background-size: cover;
+        background-position: top;
+        height: 700px;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+        .bg-shadow {
+            width: 100%;
+            height: 700px;
+            position: absolute;
+            top: 0;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .landing__details {
+            position: relative;
+
+            z-index: 99;
+            .landing__details__title {
+                margin-bottom: 40px;
+                h3 {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    -webkit-text-stroke: medium;
+                    letter-spacing: 3px;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: bold;
+                color: gray;
+                margin-bottom: 40px;
+            }
+            .landing__details__search {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: #fff;
+                column-gap: 30px;
+                width: 70%;
+                margin: auto;
+                box-shadow: 0 0 10px 2px #c0c0c0bf;
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border: 0 !important;
+                    font-size: 16px;
+                    color: gray;
+                }
+
+                button {
+                    width: 100%;
+
+                    background-color: $primary-background-color;
+                    padding: 15px 5px;
+                    color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    transition: ease-in-out 0.3s;
+                    border: 1px solid $primary-background-color;
+                    column-gap: 30px;
+                    &:hover {
+                        color: $primary-background-color;
+                        background-color: #fff;
+                        transition: ease-in-out 0.3s;
+                        column-gap: 40px;
+                    }
+                }
+            }
+        }
+    }
+    //landing end
+
+    //popular-mountain start
+
+    .popular-mountain {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: -40px;
+        position: relative;
+
+        h3 {
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 70px;
+            color: $primary-color;
+        }
+        .popular-mountain__cards {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 80px;
+            .popular-mountain__cards__single-card {
+                // box-shadow: 0 0 20px 1px #c0c0c0a3;
+                box-shadow: 0 0 25px 1px #c0c0c0bd;
+
+                img {
+                    width: 100%;
+                }
+                .card-info {
+                    text-align: left;
+                    background-color: white;
+                    padding: 20px;
+                    p {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+                    span {
+                        font-weight: 600;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+    //popular-mountain end
+
+    //article start
+
+    .article {
+        margin: 0 -40px;
+        padding: 30px 40px 60px 40px;
+        background-color: #c0c0c00d;
+        border-radius: 50px;
+        .article__img {
+            // height: 100%;
+            img {
+                width: 100%;
+                // height: 100%;
+                height: 432px;
+            }
+        }
+        .article__details {
+            padding: 50px;
+            background-color: #fff;
+            // height: 100%;
+            box-shadow: 8px -8px 28px 1px #c0c0c052;
+
+            h3 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 40px;
+                line-height: 1.4;
+            }
+            p {
+                line-height: 1.8;
+                font-size: 18px;
+                color: gray;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+        }
+        .box-shadow-special {
+            box-shadow: -8px 8px 28px 1px #c0c0c052 !important;
+        }
+    }
+    //article end
+
+    // user review start
+
+    .user-review {
+        margin-bottom: 80px;
+
+        .user-review__title {
+            margin-bottom: -40px;
+            h4 {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+        }
+        .react-multi-carousel-list {
+            padding: 100px 0 20px 0;
+
+            .react-multiple-carousel__arrow--right,
+            .react-multiple-carousel__arrow--left {
+                top: 0 !important;
+                border-radius: 0px !important;
+                background-color: $primary-background-color !important;
+                left: auto !important;
+                transition: ease-in-out 0.3s;
+                min-width: 55px;
+                min-height: 55px;
+                &:hover {
+                    background-color: silver !important;
+                    &::before {
+                        color: #fff;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+            .react-multiple-carousel__arrow--left {
+                right: 7% !important;
+                &::before {
+                    // content: "\279c";
+                    // transform: rotateY(180deg);
+                    color: #525252;
+                    font-size: 24px;
+                }
+            }
+            .react-multiple-carousel__arrow--right {
+                right: 0 !important;
+                &::before {
+                    // content: "\279c";
+                    color: #525252;
+                    font-size: 24px;
+                }
+            }
+            .user-review__card {
+                display: flex;
+                box-shadow: 0 0 15px 1px #c0c0c070;
+                background-color: #fff;
+                width: 95%;
+                margin: auto;
+                img {
+                    width: 40%;
+                    height: 217px;
+                    object-fit: scale-down;
+                }
+                div {
+                    padding: 20px 0;
+                    width: 60%;
+                    h6 {
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
+                    span {
+                        color: gray;
+                        font-weight: bold;
+                        display: block;
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                    }
+                    p {
+                        font-weight: bold;
+                        line-height: 1.6;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+    // user review end
+
+    // recent news start
+
+    .recent-news {
+        margin-bottom: 80px;
+
+        .recent-mews__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            h4 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+
+        .recent-news-left-side {
+            box-shadow: 0 10px 25px 2px #c0c0c070;
+
+            position: relative;
+            img {
+                width: 100%;
+                height: 384px;
+            }
+            .recent-news__info {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: white;
+                padding: 20px;
+                width: 50%;
+                p {
+                    color: #0dcaf0;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+                h4 {
+                    font-weight: bold;
+                    line-height: 1.4;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .recent-news-right-side {
+            box-shadow: 0 10px 25px 2px #c0c0c070;
+            display: flex;
+            margin-bottom: 24px;
+            img {
+                width: 40%;
+                max-width: 180px;
+                max-height: 180px;
+                margin-right: 20px;
+            }
+            .recent-news__info {
+                width: 60%;
+                background-color: white;
+                padding: 20px;
+                margin: auto;
+                p {
+                    color: #0dcaf0;
+                    font-weight: bold;
+                }
+                h4 {
+                    font-weight: bold;
+                    line-height: 1.6;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    // recent news end
+
+    // subscribe start
+    .subscribe {
+        background: url("../../../../photo-1485470733090-0aae1788d5af.jfif") no-repeat;
+        background-size: cover;
+        background-position: top;
+        height: 520px;
+        margin-bottom: 80px;
+        position: relative;
+        padding-top: 100px;
+        .subscribe__bg-shadow {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .subscribe__title {
+            position: relative;
+
+            margin-bottom: 50px;
+            text-align: center;
+            h3 {
+                font-size: 3.5rem;
+                font-weight: bold;
+                letter-spacing: 3px;
+                margin-bottom: 20px;
+                -webkit-text-stroke-width: thin;
+
+                color: #fff;
+            }
+        }
+        p {
+            position: relative;
+
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-weight: bold;
+            color: gray;
+
+            width: 42%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+
+    // subscribe end
+    .subscribe-form {
+        position: relative;
+        text-align: center;
+        margin-top: -120px;
+        margin-bottom: 100px;
+
+        .subscribe-form__content {
+            // position: absolute;
+            // bottom: -40px;
+            // left: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            column-gap: 30px;
+            width: 70%;
+            margin: auto;
+            box-shadow: 0 0 8px 1px #2b2b2b4d;
+
+            input {
+                width: 100%;
+                border-radius: 0;
+                border: 0;
+                font-size: 18px;
+                color: gray;
+                border-bottom: 1px solid transparent;
+                transition: ease-in-out 0.3s;
+
+                &:focus {
+                    border-bottom: 1px solid $primary-color;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+            .submit-button {
+                padding: 15px;
+            }
+        }
+    }
+}
+@include respond(custom-media, 1200px, 1400px) {
+    //article start
+    .home {
+        .article {
+            .article__img {
+                img {
+                    width: 100%;
+                    height: 463px;
+                }
+            }
+        }
+    }
+    //article end
+}
+
+@include respond(laptop) {
+    .home {
+        //landing start
+
+        .landing {
+            height: 600px;
+            .bg-shadow {
+                height: 600px;
+            }
+            .landing__details {
+                .landing__details__title {
+                    margin-bottom: 40px;
+                    h3 {
+                        font-size: 3rem;
+                        margin-bottom: 20px;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    margin-bottom: 40px;
+                }
+                .landing__details__search {
+                    column-gap: 30px;
+                    width: 80%;
+                    select {
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+                    button {
+                        padding: 10px 5px;
+                        column-gap: 20px;
+
+                        &:hover {
+                            column-gap: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //landing end
+
+        //popular-mountain start
+
+        .popular-mountain {
+            margin-top: -70px;
+            h3 {
+                font-size: 2.7rem;
+                margin-bottom: 70px;
+            }
+            .popular-mountain__cards {
+                column-gap: 45px;
+                .popular-mountain__cards__single-card {
+                    .card-info {
+                        padding: 20px;
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        //popular-mountain end
+
+        //article start
+
+        .article {
+            .article__img {
+                img {
+                    height: 450px;
+                }
+            }
+            .article__details {
+                h3 {
+                    font-size: 2.1rem;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 17px;
+                }
+            }
+        }
+        //article end
+
+        // user reviews  start
+        .user-review {
+            .react-multi-carousel-list {
+                .user-review__card {
+                    img {
+                        margin-right: 10px;
+                    }
+                    div {
+                        h6 {
+                            font-size: 1.6rem;
+                        }
+                        span {
+                            font-size: 15px;
+                        }
+                        p {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+
+        // user reviews end
+
+        // recent news start
+
+        .recent-news {
+            .recent-mews__header {
+                margin-bottom: 50px;
+                h4 {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .recent-news-left-side {
+                img {
+                    height: 344px;
+                }
+                .recent-news__info {
+                    width: 55%;
+                    p {
+                        font-size: 14px;
+                    }
+                    h4 {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .recent-news-right-side {
+                img {
+                    max-width: 160px;
+                    max-height: 160px;
+                }
+                .recent-news__info {
+                    h4 {
+                        line-height: 1.6;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        // recent news end
+
+        // subscribe start
+        .subscribe {
+            height: 450px;
+            margin-bottom: 80px;
+            padding-top: 80px;
+            .subscribe__title {
+                margin-bottom: 50px;
+                h3 {
+                    font-size: 3rem;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                font-size: 18px;
+                width: 50%;
+                margin-bottom: 40px;
+            }
+        }
+        .subscribe-form {
+            .subscribe-form__content {
+                bottom: -40px;
+                left: 15%;
+                padding: 15px;
+                column-gap: 30px;
+                width: 70%;
+                input {
+                    font-size: 16px;
+                }
+                .submit-button {
+                    padding: 10px;
+                }
+            }
+        }
+        // subscribe start
+    }
+}
+
+@include respond(small-laptop) {
+    .home {
+        //landing start
+
+        .landing {
+            .landing__details {
+                .landing__details__title {
+                    h3 {
+                        font-size: 2.6rem;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                }
+                .landing__details__search {
+                    width: 90%;
+                }
+            }
+        }
+        //landing end
+
+        //popular-mountain start
+        .popular-mountain {
+            margin-top: -70px;
+            h3 {
+                font-size: 2.5rem;
+            }
+            .popular-mountain__cards {
+                column-gap: 25px;
+                .popular-mountain__cards__single-card {
+                    .card-info {
+                        padding: 15px;
+                        p {
+                            font-size: 1.15rem;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //popular-mountain end
+
+        //article start
+
+        .article {
+            padding: 0px 40px 60px 40px;
+            .article__img {
+                img {
+                    height: 386px;
+                }
+            }
+            .article__details {
+                padding: 50px;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                p {
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                    line-height: 1.4;
+                }
+                .submit-button {
+                    padding: 7px;
+                    width: 160px;
+                    font-size: 14px;
+                }
+            }
+        }
+        //article end
+
+        // user reviews start
+        .user-review {
+            .react-multi-carousel-list {
+                .react-multiple-carousel__arrow--left {
+                    right: 10% !important;
+                }
+            }
+
+            .react-multi-carousel-list {
+                .user-review__card {
+                    div {
+                        padding: 20px 0;
+                        margin: auto;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        // user reviews end
+
+        // recent news start
+
+        .recent-news {
+            .recent-news-left-side {
+                img {
+                    height: 304px;
+                }
+                .recent-news__info {
+                    padding: 15px;
+                    width: 70%;
+                    p {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        line-height: 1.4;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .recent-news-right-side {
+                img {
+                    max-width: 140px;
+                    max-height: 140px;
+                }
+                .recent-news__info {
+                    padding: 15px;
+                    p {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        line-height: 1.4;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        // recent news end
+
+        // subscribe start
+        .subscribe-wrap {
+            .subscribe {
+                height: 360px;
+                padding-top: 60px;
+                .subscribe__title {
+                    margin-bottom: 40px;
+                    h3 {
+                        font-size: 2.4rem;
+                        margin-bottom: 10px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    width: 60%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        // subscribe start
+    }
+}
+
+@include respond(tablet) {
+    .home {
+        //landing start
+        .landing {
+            height: 500px;
+            .bg-shadow {
+                height: 501px;
+            }
+            .landing__details {
+                .landing__details__title {
+                    margin-bottom: 30px;
+                    h3 {
+                        font-size: 2.2rem;
+                        margin-bottom: 20px;
+                    }
+                }
+                p {
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                }
+                .landing__details__search {
+                    column-gap: 20px;
+                    padding: 15px;
+                    width: 100%;
+                    select {
+                        padding: 5px;
+                        font-size: 15px;
+                    }
+                    button {
+                        padding: 10px 5px;
+                        column-gap: 15px;
+
+                        &:hover {
+                            column-gap: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        //landing end
+
+        //popular-mountain start
+
+        .popular-mountain {
+            margin-top: -70px;
+            h3 {
+                font-size: 2.5rem;
+                margin-bottom: 50px;
+            }
+            .popular-mountain__cards {
+                display: flex;
+                justify-content: space-between;
+                column-gap: 35px;
+
+                flex-direction: column;
+                .popular-mountain__cards__single-card {
+                    margin-bottom: 30px;
+                    img {
+                        max-height: 200px;
+                        object-fit: cover;
+                    }
+                    .card-info {
+                        padding: 15px;
+                        p {
+                            font-size: 1.3rem;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        //popular-mountain end
+
+        //article start
+        .article {
+            padding: 0px;
+            margin: 0;
+            border-radius: 0;
+            .no-padd {
+                padding-right: 0.75rem !important;
+                padding-left: 0.75rem !important;
+            }
+            .no-margin {
+                margin-top: calc(0 * -1) !important;
+                margin-right: calc(1.5rem * -0.5) !important;
+                margin-left: calc(1.5rem * -0.5) !important;
+            }
+            .column_reverse_under768 {
+                .article__img {
+                    margin-top: 30px;
+                }
+            }
+            .article__details {
+                padding: 50px;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                p {
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                    line-height: 1.4;
+                }
+            }
+        }
+        //article end
+
+        // user reviews start
+        .user-review {
+            margin-top: 60px;
+
+            .react-multi-carousel-list {
+                .react-multiple-carousel__arrow--right,
+                .react-multiple-carousel__arrow--left {
+                    min-width: 45px;
+                    min-height: 45px;
+                }
+
+                .react-multiple-carousel__arrow--left {
+                    right: 15% !important;
+                }
+            }
+        }
+        // user reviews end
+
+        // recent news start
+
+        .recent-news {
+            .recent-news-left-side {
+                margin-bottom: 24px;
+                .recent-news__info {
+                    width: 100%;
+                }
+            }
+            .recent-news-right-side {
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        // recent news end
+
+        // subscribe start
+        .subscribe {
+            height: 300px;
+            padding-top: 50px;
+            .subscribe__title {
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                font-size: 15px;
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+        .subscribe-form {
+            .subscribe-form__content {
+                bottom: -40px;
+                left: 10%;
+                padding: 15px;
+                column-gap: 20px;
+                width: 80%;
+                input {
+                    font-size: 15px;
+                }
+                .submit-button {
+                    padding: 10px;
+                }
+            }
+        }
+        // subscribe start
+    }
+}
+
+@include respond(larg-phone) {
+    .home {
+        //landing start
+
+        .landing {
+            padding: 50px 0;
+
+            .landing__details {
+                .landing__details__title {
+                    margin-bottom: 30px;
+                    h3 {
+                        font-size: 1.8rem;
+                        margin-bottom: 20px;
+                    }
+                }
+                p {
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                }
+                .landing__details__search {
+                    column-gap: 10px;
+                    padding: 15px;
+                    width: 100%;
+                    flex-direction: column;
+                    select {
+                        padding: 5px;
+                        font-size: 16px;
+                        margin-bottom: 15px;
+                    }
+                    button {
+                        padding: 10px 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        //landing end
+
+        // subscribe start
+        .subscribe {
+            margin-bottom: 180px;
+            p {
+                width: 90%;
+            }
+        }
+        .subscribe-form {
+            margin-top: -250px;
+
+            .subscribe-form__content {
+                bottom: -100px;
+                left: calc(50% - 175px);
+                column-gap: 0px;
+                width: 350px;
+                flex-direction: column;
+                input {
+                    padding: 5px;
+                    margin-bottom: 15px;
+                }
+                .submit-button {
+                    padding: 10px 5px;
+                    font-size: 15px;
+                }
+            }
+        }
+        // subscribe start
+    }
+}
+
+@include respond(phone) {
+    .home {
+        // user reviews start
+        .user-review {
+            .react-multi-carousel-list {
+                .react-multiple-carousel__arrow--left {
+                    right: 17% !important;
+                }
+            }
+        }
+        // user reviews end
+
+        // recent news start
+
+        .recent-news {
+            .recent-mews__header {
+                margin-bottom: 50px;
+                h4 {
+                    font-size: 1.7rem;
+                }
+            }
+
+            .recent-news-left-side {
+                img {
+                    height: 274px;
+                }
+                .recent-news__info {
+                    padding: 15px;
+                    width: 100%;
+                    p {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        line-height: 1.4;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .recent-news-right-side {
+                margin-bottom: 24px;
+                img {
+                    width: 40%;
+                    max-width: 120px;
+                    max-height: 120px;
+                    margin-right: 10px;
+                }
+                .recent-news__info {
+                    width: 60%;
+                    padding: 15px;
+                    p {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        line-height: 1.4;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        // recent news end
+
+        // subscribe start
+        .subscribe {
+            .subscribe__title {
+                h3 {
+                    font-size: 1.8rem;
+                }
+            }
+            p {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+        .subscribe-form {
+            .subscribe-form__content {
+                left: calc(50% - 125px);
+                width: 250px;
+                input {
+                    font-size: 14px;
+                }
+                .submit-button {
+                    padding: 8px 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+        // subscribe start
+    }
+}

@@ -1,0 +1,144 @@
+@import "../../abstracts/mixins";
+.header {
+    padding: 25px 0;
+    .header__content {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        .header__content__list {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $primary-color;
+                    transition: ease-in-out 0.3s;
+
+                    &:hover {
+                        color: $primary-background-color;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+        .mobile-push-menu {
+            color: $primary-color;
+            display: none;
+
+            .bm-overlay {
+                top: 0;
+                left: 0;
+                z-index: 9888888 !important;
+            }
+
+            .bm-burger-button {
+                position: relative !important;
+                margin-right: auto;
+            }
+
+            .bm-menu-wrap {
+                top: 0;
+                left: 0;
+                z-index: 9999999999 !important;
+                width: 50% !important;
+                background-color: white;
+            }
+            .bm-burger-button .fa-bars {
+                font-size: 20px !important;
+            }
+            .sideMenu_logo {
+                text-align: center;
+                padding: 15px;
+                background-color: $primary-background-color;
+            }
+            .sideMenu_logo img {
+                margin: auto;
+                padding: 8px 0;
+                max-width: 90%;
+            }
+
+            .sideMenu_logo:focus {
+                outline: none !important;
+            }
+
+            .sideMenu_List {
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+            .sideMenu_List ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .sideMenu_List a {
+                display: block;
+                padding: 10px;
+                color: $primary-color !important;
+                font-size: 16px;
+                font-weight: bold;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    background-color: $primary-background-color;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+
+            .sideMenu_List li {
+                text-transform: capitalize;
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    }
+}
+
+@include respond(small-laptop) {
+    .header {
+        .header__content {
+            .header__content__logo {
+                img {
+                    width: 160px;
+                }
+            }
+            .header__content__list {
+                column-gap: 30px;
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond(tablet) {
+    .header {
+        .header__content {
+            .header__content__list {
+                display: none;
+            }
+            .mobile-push-menu {
+                display: block;
+            }
+        }
+    }
+}
+@include respond(phone) {
+    .header {
+        .header__content {
+            .mobile-push-menu {
+                .bm-menu-wrap {
+                    width: 65% !important;
+                }
+            }
+        }
+    }
+}

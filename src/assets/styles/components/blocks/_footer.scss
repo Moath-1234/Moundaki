@@ -1,0 +1,144 @@
+@import "../../abstracts/mixins";
+
+.footer {
+    padding: 70px 0;
+    letter-spacing: 1px;
+
+    .footer__logo-side {
+        img {
+            margin-bottom: 20px;
+            max-width: 90%;
+        }
+        p {
+            color: gray;
+            font-weight: bold;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding: 0;
+
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            li {
+                i {
+                    color: #000000;
+                    transition: ease-in-out 0.3s;
+                    font-size: 30px;
+
+                    &:hover {
+                        color: $primary-background-color;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+    }
+    .footer__list {
+        width: fit-content;
+        margin: auto;
+        p {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+            -webkit-text-stroke: thin;
+        }
+        ul {
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+                a {
+                    color: gray;
+                    font-weight: bold;
+                    transition: ease-in-out 0.3s;
+
+                    &:hover {
+                        color: $primary-background-color;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond(small-laptop) {
+    .footer {
+        .footer__logo-side {
+            img {
+                margin-bottom: 15px;
+                max-width: 90%;
+            }
+            p {
+                width: 90%;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
+            ul {
+                column-gap: 15px;
+                li {
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .footer__list {
+            p {
+                font-size: 16px;
+            }
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond(small-laptop) {
+    .footer {
+        padding: 30px 0;
+        .footer__logo-side {
+            margin-bottom: 30px;
+
+            img {
+                margin-bottom: 15px;
+                max-width: 90%;
+            }
+            p {
+                width: 90%;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
+            ul {
+                column-gap: 15px;
+                li {
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .footer__list {
+            width: 100%;
+            margin-bottom: 30px;
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
